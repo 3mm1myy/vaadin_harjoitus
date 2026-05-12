@@ -3,6 +3,7 @@ package com.example.views;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.html.Footer;
 import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Header;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -15,7 +16,10 @@ public class MainLayout extends AppLayout {
 
     public MainLayout() {
 
-        H1 logo = new H1("Opiskelijat ja kurssit");
+        Header header = new Header();
+        H1 h1 = new H1("Opiskelijat ja kurssit");
+        header.add(h1);
+
 
         SideNav nav = new SideNav();
 
@@ -39,9 +43,9 @@ public class MainLayout extends AppLayout {
         drawerContent.setPadding(false);
         drawerContent.setSpacing(false);
 
-        logo.getStyle().set("padding", "var(--lumo-space-m)");
+        h1.getStyle().set("padding", "var(--lumo-space-m)");
 
-        drawerContent.add(logo, nav);
+        drawerContent.add(header, nav);
 
         // tämä "työntää footerin alas"
         drawerContent.expand(nav);
