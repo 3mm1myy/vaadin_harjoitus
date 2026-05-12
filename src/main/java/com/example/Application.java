@@ -1,5 +1,6 @@
 package com.example;
 
+import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.aura.Aura;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

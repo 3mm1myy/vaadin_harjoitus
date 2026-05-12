@@ -29,7 +29,7 @@ public final class MainLayout extends AppLayout {
         appLogo.addClassName("app-logo");
         appLogo.addThemeVariants(AvatarVariant.AURA_FILLED, AvatarVariant.XSMALL);
 
-        var appName = new Span("My Application");
+        var appName = new Span("Student Management");
         appName.addClassName("app-name");
 
         var header = new HorizontalLayout(appLogo, appName);

@@ -1,4 +1,65 @@
 /* Add your styles here */
+/* Tuodaan Google-fontti */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Globaalit asetukset */
+html {
+    --lumo-font-family: 'Poppins', sans-serif;
+
+    /* Oma väripaletti */
+    --lumo-primary-color: #198596;
+    --lumo-primary-color-50pct: rgba(0, 102, 204, 0.5);
+    --lumo-primary-color-10pct: rgba(0, 102, 204, 0.1);
+
+    --lumo-success-color: #2e8b57;
+    --lumo-error-color: #d62828;
+
+    /* Muutetaan komponenttien kaarevuutta */
+    --lumo-border-radius-m: 8px;
+
+    --lumo-base-color: #BCDEE6;
+}
+
+/* Sivun tausta */
+body {
+    background-color: var(--lumo-base-color);
+}
+
+vaadin-grid {
+    background-color: #F4F5F7;
+    border: 1px solid #BCDEE6;
+}
+
+vaadin-grid::part(body-cell) {
+    background-color: #F4F5F7;
+    border-bottom: 1px solid #BCDEE6;
+}
+
+vaadin-text-field::part(input-field),
+vaadin-date-picker::part(input-field) {
+    border: 1px solid #BCDEE6;
+}
+
+vaadin-button:hover {
+    filter: brightness(0.9);
+}
+
+vaadin-checkbox {
+    margin-top: 10px;
+}
+
+vaadin-checkbox::part(label) {
+    font-size: 15px;
+    color: grey;
+}
+
+vaadin-checkbox::part(checkbox) {
+    border: 1px solid #BCDEE6;
+}
+
+vaadin-checkbox[checked]::part(checkbox) {
+    background-color: #198596;
+}
 
 .app-logo {
     border-radius: min(40%, var(--vaadin-radius-m));
